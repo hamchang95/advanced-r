@@ -1,0 +1,16 @@
+> ## Comparison when n = 10
+Unit: microseconds
+                             expr  min    lq    mean median    uq    max neval
+       Loop <- factorial_loop(10)  3.5  3.70  44.576   3.90  4.15 4049.5   100
+   Reduce <- factorial_reduce(10) 53.1 55.35 110.064  56.25 58.05 5015.1   100
+  Recursion <- factorial_func(10) 28.5 29.20  67.011  29.75 30.25 3731.7   100
+ Memoization <- factorial_mem(10) 27.8 28.40  77.211  28.95 29.50 4838.4   100
+
+
+> ## Comparison when n = 100
+Unit: microseconds
+                              expr   min     lq    mean median     uq   max neval
+       Loop <- factorial_loop(100)   5.2   6.00   9.023   7.30   8.95  84.7   100
+   Reduce <- factorial_reduce(100) 227.1 255.60 339.557 285.80 350.75 819.0   100
+  Recursion <- factorial_func(100) 268.4 274.90 352.428 286.90 304.15 774.2   100
+ Memoization <- factorial_mem(100) 280.4 287.25 351.342 295.65 315.30 831.2   100
